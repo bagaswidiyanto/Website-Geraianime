@@ -100,7 +100,7 @@ function time_ago($timestamp)
 ?>
 <?php if ($uri2 == 'anime_eps') { ?>
 <?php $slg = str_replace("-", "_", $anime->url_segment); ?>
-<div class="container-xxl anime-detail-eps">
+<div class="container-xxl anime-detail-eps ss">
     <div class="container py-5">
         <div class="row pb-5">
             <div class="col-lg-8">
