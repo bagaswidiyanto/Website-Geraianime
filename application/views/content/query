@@ -1,0 +1,11 @@
+SELECT COUNT(*)as jml, A.* FROM (
+			SELECT a.id, a.nama,a.slug as slugTurunan, a.slug, a.tgl_rilis, '' as episode, a.image, a.flag as flags FROM tbl_nama_anime a WHERE a.aktif = 'Y' AND a.nama LIKE '%bleach%'
+			UNION
+			SELECT b.id_anime, bb.nama, b.url_segment,b.slug, b.createDate, b.episode, bb.image, b.flag as flags FROM tbl_anime_list b LEFT JOIN tbl_nama_anime bb ON b.id_anime=bb.id WHERE bb.aktif = 'Y' AND bb.nama LIKE '%bleach%'
+			UNION
+			SELECT c.id, c.nama, c.slug_turunan, c.slug, c.tgl_rilis, '' as episode, c.image, c.flag as flags FROM tbl_nama_komik c WHERE c.aktif = 'Y' AND c.nama LIKE '%bleach%'
+			UNION
+			SELECT d.id_nama_komik, dd.nama, d.slug_turunan, d.slug, d.createDate, d.chapter,dd.image, d.flag as flags FROM tbl_komik d LEFT JOIN tbl_nama_komik dd ON d.id_nama_komik=dd.id WHERE dd.aktif = 'Y' AND dd.nama LIKE '%bleach%'
+			UNION 
+			SELECT e.id, e.nama, e.slug_turunan, e.slug, e.create_date, '' as episode, e.image, e.flag as flags FROM tbl_movie e WHERE e.nama LIKE '%bleach%'
+		) as A ORDER BY A.nama ASC LIMIT 1000
