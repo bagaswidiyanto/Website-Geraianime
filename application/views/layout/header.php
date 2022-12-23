@@ -9,7 +9,7 @@
     $uri4 = $this->uri->segment(4);
     ?>
     <?php foreach ($this->db->query("SELECT * FROM tbl_navigation WHERE status = 1")->result() as $n) { ?>
-        <?php if ($this->uri->segment(1) == $n->slug) {
+    <?php if ($this->uri->segment(1) == $n->slug) {
             $segment1 = $website->name . ' | ' . $n->title;
             $metaKey = $n->metaKeywords;
             $metaDes = $n->metaDescription;
@@ -58,17 +58,17 @@
     ?>
 
     <?php if ($this->uri->segment(2) != 'anime_detail' && $this->uri->segment(2) != 'anime_eps' && $this->uri->segment(2) != 'anime_movie' && $this->uri->segment(2) != 'komik_detail' && $this->uri->segment(2) != 'anime_eps') { ?>
-        <title><?= $segment1; ?> </title>
-        <meta name="keywords" content="<?= $metaKey; ?>">
-        <meta name="description" content="<?= $metaDes; ?>">
+    <title><?= $segment1; ?> </title>
+    <meta name="keywords" content="<?= $metaKey; ?>">
+    <meta name="description" content="<?= $metaDes; ?>">
 
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="<?= $website->metaTitle; ?>" />
-        <meta property="og:description" content="<?= $website->metaDescription; ?>" />
-        <meta property="og:url" content="http://geraianime.com" />
-        <meta property="og:image" itemprop="image" content="<?= base_url(); ?>/assets/img/logo_anime.jpg">
-        <link rel="apple-touch-icon" href="<?= base_url(); ?>/assets/img/logo_anime.jpg" />
-        <meta name="msapplication-TileImage" content="<?= base_url(); ?>/assets/img/logo_anime.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?= $website->metaTitle; ?>" />
+    <meta property="og:description" content="<?= $website->metaDescription; ?>" />
+    <meta property="og:url" content="http://geraianime.com" />
+    <meta property="og:image" itemprop="image" content="<?= base_url(); ?>/assets/img/logo_anime.jpg">
+    <link rel="apple-touch-icon" href="<?= base_url(); ?>/assets/img/logo_anime.jpg" />
+    <meta name="msapplication-TileImage" content="<?= base_url(); ?>/assets/img/logo_anime.jpg" />
     <?php } ?>
 
 
@@ -76,54 +76,61 @@
     <?php
     if ($this->uri->segment(2) == 'anime_detail') {
         $meta = $this->db->get_where('tbl_nama_anime', array('slug' => $this->uri->segment(3)))->row(); ?>
-        <?php $slg = str_replace("-", "_", $meta->slug); ?>
-        <title><?= $meta->nama; ?> </title>
-        <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
-        <meta name="description" content="<?= $meta->metaDescription; ?>">
+    <?php $slg = str_replace("-", "_", $meta->slug); ?>
+    <title><?= $meta->nama; ?> </title>
+    <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
+    <meta name="description" content="<?= $meta->metaDescription; ?>">
 
 
-        <meta property="og:site_name" content="Geraianime" />
-        <meta property="og:title" content="<?= $meta->nama; ?>" />
-        <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
-        <meta property="og:url" content="http://geraianime.com/anime/anime_detail/<?= $meta->slug; ?>" />
-        <meta property="og:type" content="article" />
-        <meta property="article:publisher" content="http://geraianime.com" />
-        <meta property="article:section" content="Geraianime" />
-        <meta property="article:tag" content="Geraianime" />
-        <meta property="og:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:secure_url" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="640" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="twitter:site" content="@geraianime" />
+    <meta property="og:site_name" content="Geraianime" />
+    <meta property="og:title" content="<?= $meta->nama; ?>" />
+    <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
+    <meta property="og:url" content="http://geraianime.com/anime/anime_detail/<?= $meta->slug; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="article:publisher" content="http://geraianime.com" />
+    <meta property="article:section" content="Geraianime" />
+    <meta property="article:tag" content="Geraianime" />
+    <meta property="og:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:secure_url"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="twitter:site" content="@geraianime" />
 
     <?php } ?>
 
     <?php
     if ($this->uri->segment(2) == 'anime_eps') {
         $meta = $this->db->query("SELECT a.slug , a.id_anime, a.episode, b.nama, b.slug as slgAnime, b.metaKeywords, metaDescription, b.image FROM tbl_anime_list a LEFT JOIN tbl_nama_anime b ON a.id_anime = b.id WHERE a.slug = '" . $uri3 . "' AND a.id_anime = '" . $uri4 . "' ")->row(); ?>
-        <?php $slg = str_replace("-", "_", $meta->slgAnime); ?>
-        <title><?= $meta->nama; ?> Episode <?= $meta->episode; ?></title>
-        <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
-        <meta name="description" content="<?= $meta->metaDescription; ?>">
+    <?php $slg = str_replace("-", "_", $meta->slgAnime); ?>
+    <title><?= $meta->nama; ?> Episode <?= $meta->episode; ?></title>
+    <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
+    <meta name="description" content="<?= $meta->metaDescription; ?>">
 
 
-        <meta property="og:site_name" content="Geraianime" />
-        <meta property="og:title" content="<?= $meta->nama; ?> Episode <?= $meta->episode; ?>" />
-        <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
-        <meta property="og:url" content="http://geraianime.com/anime/anime_eps/<?= $meta->slug; ?>/<?= $meta->id_anime; ?>" />
-        <meta property="og:type" content="article" />
-        <meta property="article:publisher" content="http://geraianime.com" />
-        <meta property="article:section" content="Geraianime" />
-        <meta property="article:tag" content="Geraianime" />
-        <meta property="og:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:secure_url" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="640" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="twitter:site" content="@geraianime" />
+    <meta property="og:site_name" content="Geraianime" />
+    <meta property="og:title" content="<?= $meta->nama; ?> Episode <?= $meta->episode; ?>" />
+    <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
+    <meta property="og:url"
+        content="http://geraianime.com/anime/anime_eps/<?= $meta->slug; ?>/<?= $meta->id_anime; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="article:publisher" content="http://geraianime.com" />
+    <meta property="article:section" content="Geraianime" />
+    <meta property="article:tag" content="Geraianime" />
+    <meta property="og:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:secure_url"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="twitter:site" content="@geraianime" />
 
     <?php } ?>
     <!-- END Meta untuk Anime Episode dan Detail Anime -->
@@ -133,27 +140,30 @@
     <?php
     if ($this->uri->segment(2) == 'anime_movie') {
         $meta = $this->db->get_where('tbl_movie', array('slug' => $this->uri->segment(3)))->row(); ?>
-        <?php $slg = str_replace("-", "_", $meta->slug_turunan); ?>
-        <title><?= $meta->nama; ?></title>
-        <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
-        <meta name="description" content="<?= $meta->metaDescription; ?>">
+    <?php $slg = str_replace("-", "_", $meta->slug_turunan); ?>
+    <title><?= $meta->nama; ?></title>
+    <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
+    <meta name="description" content="<?= $meta->metaDescription; ?>">
 
 
-        <meta property="og:site_name" content="Geraianime" />
-        <meta property="og:title" content="<?= $meta->nama; ?>" />
-        <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
-        <meta property="og:url" content="http://geraianime.com/movie/anime_movie/<?= $meta->slug; ?>" />
-        <meta property="og:type" content="article" />
-        <meta property="article:publisher" content="http://geraianime.com" />
-        <meta property="article:section" content="Geraianime" />
-        <meta property="article:tag" content="Geraianime" />
-        <meta property="og:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:secure_url" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="640" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="twitter:site" content="@geraianime" />
+    <meta property="og:site_name" content="Geraianime" />
+    <meta property="og:title" content="<?= $meta->nama; ?>" />
+    <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
+    <meta property="og:url" content="http://geraianime.com/movie/anime_movie/<?= $meta->slug; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="article:publisher" content="http://geraianime.com" />
+    <meta property="article:section" content="Geraianime" />
+    <meta property="article:tag" content="Geraianime" />
+    <meta property="og:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:secure_url"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="twitter:site" content="@geraianime" />
 
     <?php } ?>
     <!-- END Meta untuk Anime Movie -->
@@ -163,54 +173,61 @@
     <?php
     if ($this->uri->segment(2) == 'komik_detail') {
         $meta = $this->db->get_where('tbl_nama_komik', array('slug' => $this->uri->segment(3)))->row(); ?>
-        <?php $slg = str_replace("-", "_", $meta->slug_turunan); ?>
-        <title><?= $meta->nama; ?> </title>
-        <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
-        <meta name="description" content="<?= $meta->metaDescription; ?>">
+    <?php $slg = str_replace("-", "_", $meta->slug_turunan); ?>
+    <title><?= $meta->nama; ?> </title>
+    <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
+    <meta name="description" content="<?= $meta->metaDescription; ?>">
 
 
-        <meta property="og:site_name" content="Geraianime" />
-        <meta property="og:title" content="<?= $meta->nama; ?>" />
-        <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
-        <meta property="og:url" content="http://geraianime.com/anime/komik_detail/<?= $meta->slug; ?>" />
-        <meta property="og:type" content="article" />
-        <meta property="article:publisher" content="http://geraianime.com" />
-        <meta property="article:section" content="Geraianime" />
-        <meta property="article:tag" content="Geraianime" />
-        <meta property="og:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:secure_url" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="640" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="twitter:site" content="@geraianime" />
+    <meta property="og:site_name" content="Geraianime" />
+    <meta property="og:title" content="<?= $meta->nama; ?>" />
+    <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
+    <meta property="og:url" content="http://geraianime.com/anime/komik_detail/<?= $meta->slug; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="article:publisher" content="http://geraianime.com" />
+    <meta property="article:section" content="Geraianime" />
+    <meta property="article:tag" content="Geraianime" />
+    <meta property="og:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:secure_url"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="twitter:site" content="@geraianime" />
 
     <?php } ?>
 
     <?php
     if ($this->uri->segment(2) == 'komik_chapter') {
         $meta = $this->db->query("SELECT a.slug , a.id_nama_komik, a.chapter, b.nama, b.slug as slgKomik, b.metaKeywords, metaDescription, b.image FROM tbl_komik a LEFT JOIN tbl_nama_komik b ON a.id_nama_komik = b.id WHERE a.slug = '" . $uri3 . "' AND a.id_nama_komik = '" . $uri4 . "' ")->row(); ?>
-        <?php $slg = str_replace("-", "_", $meta->slgKomik); ?>
-        <title><?= $meta->nama; ?> Chapter <?= $meta->chapter; ?></title>
-        <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
-        <meta name="description" content="<?= $meta->metaDescription; ?>">
+    <?php $slg = str_replace("-", "_", $meta->slgKomik); ?>
+    <title><?= $meta->nama; ?> Chapter <?= $meta->chapter; ?></title>
+    <meta name="keywords" content="<?= $meta->metaKeywords; ?>">
+    <meta name="description" content="<?= $meta->metaDescription; ?>">
 
 
-        <meta property="og:site_name" content="Geraianime" />
-        <meta property="og:title" content="<?= $meta->nama; ?> Chapter <?= $meta->chapter; ?>" />
-        <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
-        <meta property="og:url" content="http://geraianime.com/anime/anime_eps/<?= $meta->slug; ?>/<?= $meta->id_nama_komik; ?>" />
-        <meta property="og:type" content="article" />
-        <meta property="article:publisher" content="http://geraianime.com" />
-        <meta property="article:section" content="Geraianime" />
-        <meta property="article:tag" content="Geraianime" />
-        <meta property="og:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:secure_url" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="640" />
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:image" content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
-        <meta property="twitter:site" content="@geraianime" />
+    <meta property="og:site_name" content="Geraianime" />
+    <meta property="og:title" content="<?= $meta->nama; ?> Chapter <?= $meta->chapter; ?>" />
+    <meta property="og:description" content="<?= $meta->metaDescription; ?>" />
+    <meta property="og:url"
+        content="http://geraianime.com/anime/anime_eps/<?= $meta->slug; ?>/<?= $meta->id_nama_komik; ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="article:publisher" content="http://geraianime.com" />
+    <meta property="article:section" content="Geraianime" />
+    <meta property="article:tag" content="Geraianime" />
+    <meta property="og:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:secure_url"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:image"
+        content="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $meta->image; ?>" />
+    <meta property="twitter:site" content="@geraianime" />
 
     <?php } ?>
     <!-- END Meta untuk Komik Episode dan Detail Komik -->
@@ -265,7 +282,8 @@
                     <p>Fanspage : @geraianime </p>
                     <div class="d-flex align-items-center">
                         <?php foreach ($sosmed as $s) { ?>
-                            <a class="btn btn-outline-light btn-social" href="<?= $s->link; ?>" target="_blank" title="<?= $s->nama; ?>"><i class="fa <?= $s->icon; ?>"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="<?= $s->link; ?>" target="_blank"
+                            title="<?= $s->nama; ?>"><i class="fa <?= $s->icon; ?>"></i></a>
                         <?php } ?>
                     </div>
                 </div>
@@ -289,7 +307,10 @@
                     ?>
                     <div class="navbar-nav py-0">
                         <?php foreach ($this->db->query("SELECT * FROM tbl_navigation WHERE parent = 0 AND status = 1 ORDER BY id ASC")->result() as $key) { ?>
-                            <a href="<?= ($key->id != 1) ? base_url() . strtolower($key->slug) : base_url() ?>" onclick="window.location.href='<?= base_url() . $key->slug; ?>/';" title="<?= $key->title; ?>" class="nav-item nav-link <?php if ($key->slug != "") {
+                        <a href="<?= ($key->id != 1) ? base_url() . strtolower($key->slug) : base_url() ?>"
+                            onclick="window.location.href='<?= base_url() . $key->slug; ?>/';"
+                            title="<?= $key->title; ?>"
+                            class="nav-item nav-link <?php if ($key->slug != "") {
                                                                                                                                                                                                                                             if ($this->uri->segment(1) == $key->slug) {
                                                                                                                                                                                                                                                 echo "active";
                                                                                                                                                                                                                                             }
@@ -310,9 +331,12 @@
                         <!-- <a href="#" class="nav-item nav-link">Jadwal</a> -->
 
                     </div>
-                    <form role="search" method="get" action="<?= base_url(); ?>search" class="position-relative ms-auto py-4 py-lg-0">
+                    <form role="search" method="get" action="<?= base_url(); ?>search"
+                        class="position-relative ms-auto py-4 py-lg-0">
                         <input type="text" name="s" placeholder="Pencarian..." class="pe-5 ps-0 py-0">
-                        <button type="submit" class="border-0 bg-transparent position-absolute end-0 top-0 m-4 m-lg-0"><i class="fa fa-search text-white"></i></button>
+                        <button type="submit"
+                            class="border-0 bg-transparent position-absolute end-0 top-0 m-4 m-lg-0"><i
+                                class="fa fa-search text-white"></i></button>
                     </form>
                 </div>
             </div>

@@ -41,6 +41,22 @@
             }
         }
     });
+
+    // Smooth scrolling on the Anime List links
+    $(".abjtext a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top - 200
+            }, 500, 'easeInOutExpo');
+            
+            if ($(this).parents('.abjtext').length) {
+                $('.abjtext .active').removeClass('active');
+                $(this).closest('a').addClass('active');
+            }
+        }
+    });
     
     
     // Back to top button
