@@ -34,7 +34,7 @@
         <div class="abjtext py-4 text-center">
             <h4 class="text-white pb-3 text-start">ANIME LIST GO TO</h4>
             <div class="col-abjad">
-                <a href="#">#</a>
+                <a href="#ZERO">#</a>
             </div>
             <div class="col-abjad">
                 <a href="#A">A</a>
@@ -135,6 +135,25 @@
 
                 <div class="list-anime mt-3">
                     <div class="row g-4 justify-content-between pt-2">
+                        <?php $zero = $this->db->query("SELECT slug, nama FROM tbl_nama_anime WHERE nama NOT LIKE 'A%' AND nama NOT LIKE 'B%' AND nama NOT LIKE 'C%' AND nama NOT LIKE 'D%' AND nama NOT LIKE 'E%' AND nama NOT LIKE 'F%' AND nama NOT LIKE 'G%' AND nama NOT LIKE 'H%' AND nama NOT LIKE 'I%' AND nama NOT LIKE 'J%' AND nama NOT LIKE 'K%' AND nama NOT LIKE 'L%' AND nama NOT LIKE 'M%' AND nama NOT LIKE 'N%' AND nama NOT LIKE 'O%' AND nama NOT LIKE 'P%' AND nama NOT LIKE 'Q%' AND nama NOT LIKE 'R%' AND nama NOT LIKE 'S%' AND nama NOT LIKE 'T%' AND nama NOT LIKE 'U%' AND nama NOT LIKE 'V%' AND nama NOT LIKE 'W%' AND nama NOT LIKE 'X%' AND nama NOT LIKE 'Y%' AND nama NOT LIKE 'Z%' AND aktif = 'Y' ORDER BY nama ASC")->row() ?>
+                        <?php if (isset($zero->nama)) { ?>
+                        <div class="col-lg-6">
+                            <div class="abjad bg-linier-orange py-1 px-3" id="ZERO">
+                                <h4 class="text-white">#</h4>
+                            </div>
+                            <div class="bg-white pb-3">
+                                <?php foreach ($this->db->query("SELECT slug, nama FROM tbl_nama_anime WHERE nama NOT LIKE 'A%' AND nama NOT LIKE 'B%' AND nama NOT LIKE 'C%' AND nama NOT LIKE 'D%' AND nama NOT LIKE 'E%' AND nama NOT LIKE 'F%' AND nama NOT LIKE 'G%' AND nama NOT LIKE 'H%' AND nama NOT LIKE 'I%' AND nama NOT LIKE 'J%' AND nama NOT LIKE 'K%' AND nama NOT LIKE 'L%' AND nama NOT LIKE 'M%' AND nama NOT LIKE 'N%' AND nama NOT LIKE 'O%' AND nama NOT LIKE 'P%' AND nama NOT LIKE 'Q%' AND nama NOT LIKE 'R%' AND nama NOT LIKE 'S%' AND nama NOT LIKE 'T%' AND nama NOT LIKE 'U%' AND nama NOT LIKE 'V%' AND nama NOT LIKE 'W%' AND nama NOT LIKE 'X%' AND nama NOT LIKE 'Y%' AND nama NOT LIKE 'Z%' AND aktif = 'Y' ORDER BY nama ASC")->result() as $list) {
+                                        $genre = $this->db->query("SELECT c.nama FROM tbl_nama_anime a left JOIN tbl_genre_detail b ON a.id=b.animeID LEFT JOIN tbl_genre c ON b.genreID=c.id WHERE a.slug = '" . $list->slug . "'  GROUP by b.animeID ORDER BY b.genreID ASC ")->row();
+                                    ?>
+                                <div class="list d-flex justify-content-between">
+                                    <a href="<?= base_url(); ?>anime/anime_detail/<?= $list->slug; ?>"
+                                        title="<?= $list->nama; ?> Subtitle Indonesia"><?= $list->nama; ?></a>
+                                    <span><?= $genre->nama; ?></span>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <?php } ?>
                         <?php $a = $this->db->query("SELECT slug, nama FROM tbl_nama_anime WHERE aktif = 'Y' AND nama LIKE 'A%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($a->nama)) { ?>
                         <div class="col-lg-6">
@@ -458,7 +477,7 @@
                             </div>
                         </div>
                         <?php } ?>
-                        <?php $r = $this->db->query("SELECT slug, nama FROM tbl_nama_anime WHERE aktif = 'Y' AND nama LIKE 'Q%' ORDER BY nama ASC")->row() ?>
+                        <?php $r = $this->db->query("SELECT slug, nama FROM tbl_nama_anime WHERE aktif = 'Y' AND nama LIKE 'R%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($r->nama)) { ?>
                         <div class="col-lg-6">
                             <div class="abjad bg-linier-orange py-1 px-3" id="R">

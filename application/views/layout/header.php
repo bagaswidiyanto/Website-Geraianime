@@ -275,7 +275,7 @@
     <div class="container-fluid position-relative p-0" id="home">
         <div class="hero-header position-relative">
             <div class="hero-bg">
-                <img src="<?= base_url() ?>assets/img/hero.jpg" class="img-fluid w-100" alt="">
+                <img src="https://admin103.geraianime.com/upload/<?= $hero->image; ?>" class="img-fluid w-100" alt="">
             </div>
             <div class="sosmed">
                 <div class="d-flex justify-content-end align-items-center">

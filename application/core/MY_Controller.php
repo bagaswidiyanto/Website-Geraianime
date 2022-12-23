@@ -13,6 +13,7 @@ class MY_Controller extends CI_Controller
 		$this->CI = &get_instance();
 		// $this->data['menu']=$this->menu(0,$h="");
 		$this->data['website'] = $this->CI->db->get('tbl_website')->row();
+		$this->data['hero'] = $this->CI->db->get('tbl_hero')->row();
 		$this->data['download'] = $this->CI->db->get('tbl_download')->row();
 		$this->data['sosmed'] = $this->CI->db->get('tbl_sosmed')->result();
 		$this->data['bIklan1'] = $this->db->get_where('tbl_iklan', array('posisi' => 1))->row();

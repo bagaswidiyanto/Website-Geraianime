@@ -48,7 +48,7 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 200
+                scrollTop: $(this.hash).offset().top - 45
             }, 500, 'easeInOutExpo');
             
             if ($(this).parents('.abjtext').length) {
