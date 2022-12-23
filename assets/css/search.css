@@ -1,0 +1,161 @@
+.all-anime .header-title h1 {
+    font-size: 16pt;
+}
+
+.all-anime .anime-eps-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    max-height: 165px;
+}
+
+.all-anime .anime-eps-item {
+    width: calc(20.5% - 20px);
+    height: calc(0vh - 80px);
+    display: inline-table;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 10pt;
+    color: #ff0;
+    background: #D9D9D9;
+    position: relative;
+    /* background-size: 165px 110px; */
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.all-anime .anime-eps-wrap img {
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+    height: 165px;
+}
+
+.all-anime .anime-eps-wrap:hover::before {
+    opacity: .6;
+}
+
+.all-anime .anime-eps-wrap:hover img {
+    transform: scale(1.2);
+}
+
+.all-anime .anime-eps-item .episode {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: max-content;
+    background: #FFC700;
+    z-index: 1;
+}
+
+.all-anime .anime-eps-item .episode p {
+    font-size: 8pt;
+    color: #fff;
+}
+
+.all-anime .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: left;
+    padding: 10px 10px 30px 10px;
+    transition: .5s;
+}
+
+.all-anime a:hover .content {
+    background: #FF6147;
+}
+
+.all-anime .content p {
+    font-weight: 700;
+    font-size: 9pt;
+    color: #fff;
+    line-height: 14px;
+}
+
+.all-anime .content span {
+    font-size: 8pt;
+    color: #fff;
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+}
+
+
+
+.all-anime .blog-pagination {
+    margin-top: 80px
+}
+
+.all-anime .blog-pagination .page-link.prev,
+.all-anime .blog-pagination .page-link.next {
+    width: auto;
+    height: auto;
+    padding: 0 20px;
+}
+
+.all-anime .blog-pagination .halaman {
+    background: #575757;
+    text-align: center;
+    height: fit-content;
+    padding: 10px 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* .all-anime .blog-pagination a .link {
+    background: #575757 !important;
+    color: #fff !important;
+} */
+
+.all-anime .blog-pagination .page-link {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.all-anime .blog-pagination .page-link a {
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    margin-left: -1px;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px !important;
+    color: #222222;
+    border: none;
+    margin-right: 8px;
+    background-color: #D9D9D9;
+}
+
+.all-anime .blog-pagination .page-link i,
+.all-anime .blog-pagination .page-link span {
+    font-size: 13px
+}
+
+.all-anime .blog-pagination .page-link a:hover {
+    background-color: #FF6147;
+    color: #fff !important;
+}
+
+.all-anime .blog-pagination .page-item.active .page-link {
+    background-color: #FF6147;
+    color: #fff
+}
+
+.all-anime .blog-pagination .page-item:last-child .page-link {
+    margin-right: 0
+}

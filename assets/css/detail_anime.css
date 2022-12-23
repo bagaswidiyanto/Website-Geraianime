@@ -1,0 +1,267 @@
+.anime-detail .side-other-movies .header-title {
+    background: #FFC700;
+}
+
+.anime-detail .side-other-movies .header-title h4 {
+    font-size: 13pt;
+}
+
+
+.anime-detail .side-other-movies .img {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  max-height: 430px;
+}
+
+.anime-detail .side-other-movies .img img {
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+.anime-detail .side-other-movies .img:hover::before {
+  opacity: .6;
+}
+.anime-detail .side-other-movies .img:hover img {
+  transform: scale(1.2);
+}
+
+
+
+.anime-detail .content .genre p {
+    color: #FF6147;
+    font-size: 9pt;
+}
+
+
+.anime-detail .side-other-movies .content p {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.anime-detail .side-other-movies .content span {
+    color: #fff;
+    font-size: 8pt;
+}
+
+.anime-detail .side-other-movies a:hover .content p {
+    color: #FF6147;
+}
+
+.anime-detail .side-other-movies a:hover .content span {
+    color: #FF6147;
+}
+
+.anime-detail .about-anime .table-striped > tbody > tr {
+    background-color: #D9D9D90F;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.anime-detail .about-anime .table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #ffffff29;
+    --bs-table-accent-bg: none;
+    color: #fff;
+  }
+
+  .anime-detail .about-anime .table-striped td a:hover {
+  }
+
+  .anime-detail .desk p {
+    color: #fff;
+    text-align: justify;
+  }
+
+
+  .anime-detail .anime-eps-container .header-title {
+    border-bottom: 2px solid #FF6147;
+    padding-bottom: 10px;
+  }
+
+  .anime-detail .anime-eps-container .d-flex {
+    padding: 10px 5px;
+    background-color: #444;
+  }
+
+  .anime-detail .anime-eps-container .d-flex:nth-of-type(2n+1) {
+    background-color: transparent;
+    --bs-table-accent-bg: none;
+    color: #000;
+  }
+
+  .anime-detail .anime-eps-container a:hover p {
+    color: #FF6147;
+  }
+
+
+  .anime-detail .anime-eps-container p {
+    color: #fff;
+    font-weight: 700;
+    text-align: start;
+  }
+
+  .anime-detail .anime-eps-container span {
+    color: #fff;
+    font-size: 10pt;
+    width: 14rem;
+    text-align: right;
+  }
+
+
+
+  .anime-detail-eps .side-other-movies .header-title {
+    background: #FFC700;
+}
+
+.anime-detail-eps .side-other-movies .header-title h4 {
+    font-size: 13pt;
+}
+
+.anime-detail-eps .box-next{
+  border: 1px solid #3f3f3f;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 5px 15px;
+  color: #FF6147;
+  text-align: left;
+  font-size: 10pt;
+}
+
+.anime-detail-eps .box-next:hover {
+  border: 1px solid #FF6147;
+}
+
+.anime-detail-eps .side-other-movies .content .genre p {
+    color: #FF6147;
+    font-size: 9pt;
+}
+
+
+.anime-detail-eps .side-other-movies .img {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  max-height: 85px;
+}
+
+.anime-detail-eps .side-other-movies .img img {
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+.anime-detail-eps .side-other-movies .img:hover::before {
+  opacity: .6;
+}
+.anime-detail-eps .side-other-movies .img:hover img {
+  transform: scale(1.2);
+}
+
+.anime-detail-eps .side-other-movies .content p {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.anime-detail-eps .side-other-movies .content span {
+    color: #fff;
+    font-size: 8pt;
+}
+
+.anime-detail-eps .side-other-movies a:hover .content p {
+    color: #FF6147;
+}
+
+.anime-detail-eps .side-other-movies a:hover .content span {
+    color: #FF6147;
+}
+
+.anime-detail-eps .about-anime .table-striped > tbody > tr {
+    background-color: #D9D9D90F;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.anime-detail-eps .about-anime .table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #ffffff29;
+    --bs-table-accent-bg: none;
+    color: #fff;
+  }
+
+  .anime-detail-eps .desk p {
+    color: #fff;
+    text-align: justify;
+  }
+
+
+  .anime-detail-eps .anime-eps-container .header-title {
+    border-bottom: 2px solid #FF6147;
+    padding-bottom: 10px;
+  }
+
+  .anime-detail-eps .anime-eps-container .anime-eps-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    max-height: 130px;
+  }
+  
+  .anime-detail-eps .anime-eps-container .anime-eps-wrap img {
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+  }
+  .anime-detail-eps .anime-eps-container .anime-eps-wrap:hover::before {
+    opacity: .6;
+  }
+  .anime-detail-eps .anime-eps-container .anime-eps-wrap:hover img {
+    transform: scale(1.2);
+  }
+
+  .anime-detail-eps .anime-eps-container .episode {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: max-content;
+    background: #FFC700;
+    z-index: 1;
+}
+
+.anime-detail-eps .anime-eps-container .episode p {
+    font-size: 8pt;
+    color: #fff;
+}
+
+.anime-detail-eps .anime-eps-container .content {
+    text-align: left;
+}
+
+  .anime-detail-eps .anime-eps-container p {
+    color: #fff;
+    font-weight: 700;
+    text-align: start;
+    font-size: 10pt;
+  }
+
+  .anime-detail-eps .anime-eps-container span {
+    color: #9d9d9d;
+    font-size: 8pt;
+  }
+
+  .anime-detail-eps .anime-eps-container a:hover .content p {
+    color: #FF6147;
+  }
+
+  .anime-detail-eps .anime-eps-container a:hover .content span {
+    color: #FF6147;
+  }
+
+
+

@@ -1,0 +1,75 @@
+.anime-list-on-going .header-title {
+    border-bottom: 2px solid #FF6147;
+    padding-bottom: 2rem;
+}
+
+.anime-list-on-going .on-going .header-title-going h2 {
+    color: #FFC700;
+}
+
+.list-anime .list:hover {
+    background: #FF61472B;
+}
+
+.list-anime .list {
+    padding: 10px 25px;
+    position: relative;
+}
+
+.list-anime .list::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(-50%, -50%);
+    background: #FF6147;
+    width: 3px;
+    height: 70%;
+}
+
+.list-anime .list::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #57575747;
+    width: 97%;
+    height: 1px;
+}
+
+.list-anime .list a {
+    color: #000;
+}
+
+.list-anime .list a:hover {
+    color: #FF6147;
+}
+
+.list-anime .list span {
+    color: #FF6147;
+}
+
+.bg-abjtext {
+    background: linear-gradient(96.48deg, #FF6147 0%, #F4B102 99.67%);
+}
+
+.abjtext .col-abjad {
+    text-align: center;
+    display: inline-table;
+    width: 3.26%;
+    margin-top: 5px;
+}
+
+.abjtext .col-abjad a {
+    display: block;
+    font-weight: 700;
+    padding: 4px 0;
+    color: #000;
+    background: #fff;
+}
+
+.abjtext .col-abjad a:hover {
+    background: #FF6147;
+    color: #fff !important;
+}

@@ -1,0 +1,296 @@
+.all-movie .img {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.all-movie .img img {
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+
+.all-movie .img:hover::before {
+  opacity: .6;
+}
+
+.all-movie .img:hover img {
+  transform: scale(1.2);
+}
+
+.all-movie .headline .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0) 11.32%, #040404 75.91%);
+  padding: 60px 30px;
+}
+
+.all-movie .headline .content h5 {
+  color: #fff;
+  font-weight: 700 !important;
+  margin-bottom: 1rem;
+  font-size: 20pt;
+}
+
+.all-movie .headline .content p {
+  color: #fff;
+  font-size: 10pt;
+}
+
+.all-movie .headline .content span {
+  color: #FF6147;
+  font-size: 12pt;
+}
+
+
+.all-movie .headline-last .release {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: max-content;
+  background: rgba(47, 46, 48, 0.8);
+  padding: 5px;
+  z-index: 1;
+}
+
+.all-movie .headline-last .release p {
+  font-size: 8pt;
+  color: #fff;
+}
+
+.all-movie .headline-last .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(47, 46, 48, 0.8);
+  padding: 10px;
+  z-index: 1;
+}
+
+.all-movie .headline-last .content p {
+  color: #fff;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+
+
+.all-movie .blog-pagination {
+  margin-top: 80px
+}
+
+.all-movie .blog-pagination .page-link.prev,
+.all-movie .blog-pagination .page-link.next {
+  width: auto;
+  height: auto;
+  padding: 0 20px;
+}
+
+.all-movie .blog-pagination .halaman {
+  background: #575757;
+  text-align: center;
+  height: fit-content;
+  padding: 10px 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+/* .all-movie .blog-pagination a .link {
+background: #575757 !important;
+color: #fff !important;
+} */
+
+.all-movie .blog-pagination .page-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.all-movie .blog-pagination .page-link a {
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  margin-left: -1px;
+  line-height: 45px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px !important;
+  color: #222222;
+  border: none;
+  margin-right: 8px;
+  background-color: #D9D9D9;
+}
+
+.all-movie .blog-pagination .page-link i,
+.all-movie .blog-pagination .page-link span {
+  font-size: 13px
+}
+
+.all-movie .blog-pagination .page-link a:hover {
+  background-color: #FF6147;
+  color: #fff !important;
+}
+
+.all-movie .blog-pagination .page-item.active .page-link {
+  background-color: #FF6147;
+  color: #fff
+}
+
+.all-movie .blog-pagination .page-item:last-child .page-link {
+  margin-right: 0
+}
+
+
+
+.movie-detail .side-other-movies .header-title {
+    background: #FFC700;
+}
+
+.movie-detail .side-other-movies .header-title h4 {
+    font-size: 13pt;
+}
+
+
+.movie-detail .side-other-movies .img {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  max-height: 430px;
+}
+
+.movie-detail .side-other-movies .img img {
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+.movie-detail .side-other-movies .img:hover::before {
+  opacity: .6;
+}
+.movie-detail .side-other-movies .img:hover img {
+  transform: scale(1.2);
+}
+
+
+
+.movie-detail .content .genre p {
+    color: #FF6147;
+    font-size: 9pt;
+}
+
+
+.movie-detail .side-other-movies .content p {
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.movie-detail .side-other-movies .content span {
+    color: #fff;
+    font-size: 8pt;
+}
+
+.movie-detail .side-other-movies a:hover .content p {
+    color: #FF6147;
+}
+
+.movie-detail .side-other-movies a:hover .content span {
+    color: #FF6147;
+}
+
+.movie-detail .about-anime .table-striped > tbody > tr {
+    background-color: #D9D9D90F;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.movie-detail .about-anime .table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #ffffff29;
+    --bs-table-accent-bg: none;
+    color: #fff;
+  }
+
+  .movie-detail .desk p {
+    color: #fff;
+    text-align: justify;
+  }
+
+
+  .movie-detail .movie-container .header-title {
+    border-bottom: 2px solid #FF6147;
+    padding-bottom: 10px;
+  }
+
+
+  .movie-detail .movie-container .movie-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    max-height: 130px;
+  }
+  
+  .movie-detail .movie-container .movie-wrap img {
+    width: 100%;
+    transition: all ease-in-out 0.3s;
+  }
+  .movie-detail .movie-container .movie-wrap:hover::before {
+    opacity: .6;
+  }
+  .movie-detail .movie-container .movie-wrap:hover img {
+    transform: scale(1.2);
+  }
+
+  .movie-detail .movie-container .episode {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: max-content;
+    background: #FFC700;
+    z-index: 1;
+}
+
+.movie-detail .movie-container .episode p {
+    font-size: 8pt;
+    color: #fff;
+}
+
+.movie-detail .movie-container .content {
+    text-align: left;
+    padding: 7px;
+}
+
+  .movie-detail .movie-container p {
+    color: #fff;
+    font-weight: 700;
+    text-align: start;
+    font-size: 9pt;
+  }
+
+  .movie-detail .movie-container span {
+    color: #9d9d9d;
+    font-size: 8pt;
+  }
+
+  .movie-detail .movie-container a:hover .content p {
+    color: #FF6147;
+  }
+
+  .movie-detail .movie-container a:hover .content span {
+    color: #FF6147;
+  }
+

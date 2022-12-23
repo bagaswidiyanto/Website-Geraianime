@@ -1,0 +1,277 @@
+@media (max-width:1200px) {
+  .hero-header .sosmed {
+    width: calc(55% - 0%);
+  }
+
+  .manga-detail-chapter .chapter_list .box {
+    width: 23.6%;
+  }
+}
+
+
+
+@media (max-width:991px) {
+  .hero-header .sosmed {
+    width: calc(70% - 0%);
+  }
+
+  .hero-header .logo img {
+    max-width: 65%;
+  }
+
+
+  .anime-eps .anime-eps-item {
+    width: calc(25.9% - 20px);
+  }
+.all-anime .anime-eps-item {
+    width: calc(25.9% - 20px);
+  }
+  
+  .anime .anime-item {
+    width: calc(25.9% - 20px);
+  }
+
+  .popular-manga .box-manga {
+    width: calc(25.9% - 20px);
+  }
+
+  .abjtext .col-abjad {
+    width: 6.5%;
+  }
+}
+
+@media (max-width:767px) {
+  .hero-header .logo img {
+    max-width: 48%;
+  }
+
+  .hero-header .sosmed {
+    width: calc(80% - 0%);
+  }
+
+  .anime-eps .anime-eps-item {
+    width: calc(34.7% - 20px);
+  }
+.all-anime .anime-eps-item {
+    width: calc(34.7% - 20px);
+  }
+
+  .anime .anime-item {
+    width: calc(34.7% - 20px);
+  }
+
+  .manga .blog-pagination .prev span {
+    display: none;
+  }
+
+  .manga .blog-pagination .next span {
+    display: none
+  }
+
+  .popular-manga .box-manga {
+    width: calc(34.7% - 20px);
+  }
+
+  .manga-detail-chapter .chapter_list .box {
+    width: 31.6%;
+  }
+  
+}
+
+
+@media (max-width:600px) {
+  .hero-header .sosmed p {
+    display: none;
+  }
+
+  .hero-header .sosmed {
+    width: calc(38% - 0%);
+    padding: 10px 8px 10px 10px;
+  }
+
+  .hero-header .sosmed .btn.btn-social {
+    margin-right: 0;
+    width: 0;
+    height: 0;
+    color: #FFF;
+    background: transparent;
+  }
+
+  .hero-header .logo img {
+    max-width: 30%;
+  }
+
+  ul.breadcrumb li {
+    font-size: 8pt;
+  }
+
+  .anime .anime-item .episode p {
+    font-size: 6pt;
+  }
+
+  .anime-detail-eps .header-title-detail h2 {
+    font-size: 12pt;
+  }
+
+  .anime-detail-eps .release {
+    font-size: 8pt;
+  }
+
+  .anime-detail-eps .about-anime .table-striped > tbody > tr {
+    font-size: 9pt;
+  }
+
+  .anime-detail-eps .desk p {
+    font-size: 10pt;
+  }
+
+  .anime-detail .header-title-detail h2 {
+    font-size: 12pt;
+  }
+
+  .anime-detail .about-anime .table-striped > tbody > tr {
+    font-size: 9pt;
+  }
+
+  .anime-detail .desk p {
+    font-size: 10pt;
+  }
+
+  .anime-detail .anime-eps-container p {
+    font-size: 9pt;
+  }
+
+  .anime-detail .anime-eps-container span {
+    font-size: 8pt;
+  }
+
+  .movie-detail .header-title-detail h2 {
+    font-size: 12pt;
+  }
+
+  .movie-detail .about-anime .table-striped > tbody > tr {
+    font-size: 9pt;
+  }
+
+  .movie-detail .desk p {
+    font-size: 10pt;
+  }
+
+  .manga-detail-chapter .header-title-detail h2 {
+    font-size: 12pt;
+  }
+
+  .manga-detail-chapter .release {
+    font-size: 8pt;
+  }
+
+  .manga-detail-chapter .about-anime .table-striped > tbody > tr {
+    font-size: 9pt;
+  }
+
+  .manga-detail-chapter .desk p {
+    font-size: 10pt;
+  }
+
+  .anime-eps .content {
+    padding: 3px 7px 17px 7px;
+  }
+
+  .anime-eps .content span {
+    left: 7px;
+    bottom: 0;
+  }
+
+  .anime-eps .blog-pagination .halaman {
+    padding: 5px 10px;
+  }
+
+  .anime-eps .blog-pagination .halaman p {
+    font-size: 10px;
+  }
+
+  .anime-eps .blog-pagination .page-link a{
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 7px !important;
+  }
+
+  
+
+
+  .list-anime .list a {
+    font-size: 10pt;
+  }
+  
+
+  .list-anime .list span {
+    font-size: 9pt;
+  }
+}
+
+
+@media (max-width:480px) {
+  .anime-eps .anime-eps-item {
+    width: calc(51.8% - 20px);
+  }
+
+.all-anime .anime-eps-item {
+    width: calc(51.8% - 20px);
+  }
+
+
+  
+  .anime .anime-item {
+    width: calc(51.8% - 20px);
+  }
+
+  .movie .headline .text-populer {
+    padding: 5px 30px;
+  }
+
+  .movie .headline .text-populer h5 {
+    font-size: 8pt;
+  }
+
+  .movie .headline .content {
+    padding: 20px 12px;
+  }
+
+  .movie .headline .content h5 {
+    font-size: 12pt;
+  }
+
+  .movie .headline .content p {
+    font-size: 7pt;
+  }
+
+  .movie .headline .content span {
+    font-size: 8pt;
+  }
+
+  .popular-anime .content p {
+    font-size: 9pt;
+    line-height: 16px;
+    padding: 5px 0;
+  }
+
+  .popular-manga .box-manga {
+    width: calc(52% - 20px);
+  }
+
+  .manga-detail-chapter .chapter_list .box {
+    width: 47.5%;
+  }
+
+  .abjtext .col-abjad {
+    width: 5.9%;
+  }
+
+  .all-movie .headline-last .release p {
+    font-size: 5pt;
+  }
+  .all-movie .headline-last .content p{
+    font-size: 7pt;
+  }
+}
