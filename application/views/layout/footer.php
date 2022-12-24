@@ -12,8 +12,10 @@
                         <p class="text-white"><?= $website->description; ?></p>
                     </div>
                     <div class="terms">
-                        <a href="" class="text-white fs-5 fw-normal me-3">Terms & Agreements</a>
-                        <a href="" class="text-white fs-5 fw-normal">Privacy Policy</a>
+                        <a href="<?= base_url(); ?>terms" title="Terms & Agreements"
+                            class="text-white fs-5 fw-normal me-3">Terms & Agreements</a>
+                        <a href="<?= base_url(); ?>privacy" title="Privacy Policy"
+                            class="text-white fs-5 fw-normal">Privacy Policy</a>
                     </div>
 
                 </div>

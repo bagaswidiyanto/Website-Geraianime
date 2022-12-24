@@ -54,6 +54,14 @@
         $segment1 = $website->metaTitle;
         $metaKey = $website->metaKeywords;
         $metaDes = $website->metaDescription;
+    } else if ($this->uri->segment(1) == 'terms') {
+        $segment1 = $website->metaTitle . ' | Terms & Agreements';
+        $metaKey = $website->metaKeywords;
+        $metaDes = $website->metaDescription;
+    } else if ($this->uri->segment(1) == 'privacy') {
+        $segment1 = $website->metaTitle . ' | Privacy Policy';
+        $metaKey = $website->metaKeywords;
+        $metaDes = $website->metaDescription;
     }
     ?>
 
