@@ -101,7 +101,7 @@ function time_ago($timestamp)
             <?php foreach ($anime as $al) {
                 $slg = str_replace("-", "_", $al->slg);
             ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>anime/anime_eps/<?= $al->slug; ?>/<?= $al->id_anime; ?>"
                         title="<?= $al->nama; ?> Episode <?= $al->episode; ?>">
@@ -135,7 +135,7 @@ function time_ago($timestamp)
 
 <div class="container-xxl iklan">
     <div class="container">
-        <div class="box-advert">
+        <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
             <?php if ($bIklan1->image != '') { ?>
             <a href="<?= $bIklan1->url; ?>">
                 <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan1->image; ?>" class="img-fluid w-100"
@@ -150,13 +150,13 @@ function time_ago($timestamp)
 
 <div class="container-xxl movie">
     <div class="container pt-5">
-        <div class="header-title">
+        <div class="header-title wow fadeInUp" data-wow-delay="0.3s">
             <h1>Popular Anime Movie</h1>
         </div>
 
         <div class="row mt-4">
             <div class="col-lg-8">
-                <div class="headline position-relative">
+                <div class="headline position-relative wow fadeInUp" data-wow-delay="0.3s">
                     <a href="<?= base_url(); ?>movie/anime_movie/<?= $movieFirst->slug; ?>"
                         title="<?= $movieFirst->nama; ?>">
                         <div class="img">
@@ -174,7 +174,7 @@ function time_ago($timestamp)
                         </div>
                     </a>
                 </div>
-                <div class="row g-4 mt-4">
+                <div class="row g-4 mt-4 wow fadeInUp" data-wow-delay="0.3s">
                     <?php foreach ($movieLastPopuler as $ml) {
                         $slg = str_replace("-", "_", $ml->slug_turunan);
                     ?>
@@ -200,7 +200,7 @@ function time_ago($timestamp)
             </div>
         </div>
         <div class="col-lg-4 mt-5 mt-lg-0">
-            <div class="box-advert">
+            <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
                 <?php if ($bIklan2->image != '') { ?>
                 <a href="<?= $bIklan2->url; ?>">
                     <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan2->image; ?>"
@@ -218,7 +218,7 @@ function time_ago($timestamp)
                     <?php foreach ($movieLast as $ml) {
                         $slg = str_replace("-", "_", $ml->slug_turunan);
                     ?>
-                    <div class="col-4">
+                    <div class="col-4 wow fadeInUp" data-wow-delay="0.3s">
                         <a href="<?= base_url(); ?>movie/anime_movie/<?= $ml->slug; ?>" title="<?= $ml->nama; ?>">
                             <div class="img">
                                 <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/thumbnail/<?= $ml->image; ?>"
@@ -226,7 +226,7 @@ function time_ago($timestamp)
                             </div>
                         </a>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 wow fadeInUp" data-wow-delay="0.3s">
                         <a href="<?= base_url(); ?>movie/anime_movie/<?= $ml->slug; ?>" title="<?= $ml->nama; ?>">
                             <div class="content ms-2">
                                 <div class="genre">
@@ -248,8 +248,9 @@ function time_ago($timestamp)
 
 <div class="container-xxl anime">
     <div class="container py-5">
-        <div class="d-sm-flex d-inline-block justify-content-between align-items-center">
-            <div class="header-title py-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="d-sm-flex d-inline-block justify-content-between align-items-center wow fadeInUp"
+            data-wow-delay="0.3s">
+            <div class="header-title py-4">
                 <h1>New Anime </h1>
             </div>
             <div class="full-anime mb-3 mb-sm-0">
@@ -260,7 +261,7 @@ function time_ago($timestamp)
             <?php foreach ($new_anime as $na) {
                 $slg = str_replace("-", "_", $na->slug);
             ?>
-            <div class="anime-item">
+            <div class="anime-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime position-relative">
                     <a href="<?= base_url(); ?>anime/anime_detail/<?= $na->slug; ?>" title="<?= $na->nama; ?>">
                         <div class="anime-wrap">
@@ -285,8 +286,9 @@ function time_ago($timestamp)
 
 <div class="container-xxl popular-anime">
     <div class="container py-5">
-        <div class="d-sm-flex d-inline-block justify-content-between align-items-center">
-            <div class="header-title py-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="d-sm-flex d-inline-block justify-content-between align-items-center wow fadeInUp"
+            data-wow-delay="0.3s">
+            <div class="header-title py-4">
                 <h1>Popular Anime </h1>
             </div>
             <div class="full-anime mb-3 mb-sm-0">
@@ -297,7 +299,7 @@ function time_ago($timestamp)
             <?php foreach ($populer_anime as $pa) {
                 $slg = str_replace("-", "_", $pa->slug);
             ?>
-            <div class="col-lg-6">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <a href="<?= base_url(); ?>anime/anime_detail/<?= $pa->slug; ?>" title="<?= $pa->nama; ?>">
                     <div class="row">
                         <div class="col-5">
@@ -333,7 +335,7 @@ function time_ago($timestamp)
 
 <div class="container-xxl iklan">
     <div class="container">
-        <div class="box-advert">
+        <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
             <?php if ($bIklan3->image != '') { ?>
             <a href="<?= $bIklan3->url; ?>">
                 <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan3->image; ?>" class="img-fluid w-100"
@@ -349,7 +351,7 @@ function time_ago($timestamp)
 
 <div class="container-xxl manga">
     <div class="container py-5">
-        <div class="header-title d-flex justify-content-between pb-4">
+        <div class="header-title d-flex justify-content-between pb-4 wow fadeInUp" data-wow-delay="0.3s">
             <div>
                 <h1 class="mb-4">New Manga</h1>
                 <h4 class="text-white">Manga Terbaru</h4>
@@ -366,7 +368,7 @@ function time_ago($timestamp)
                             $slg = str_replace("-", "_", $k->slug_turunan);
 
                         ?>
-                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>komik/komik_chapter/<?= $k->slug; ?>/<?= $k->id_nama_komik; ?>"
                                 title="<?= $k->nama; ?> Chapter <?= $k->chapter; ?>">
                                 <div class="img">
@@ -398,7 +400,7 @@ function time_ago($timestamp)
 
 <div class="container-xxl popular-manga">
     <div class="container py-5">
-        <div class="header-title text-start pb-4">
+        <div class="header-title text-start pb-4 wow fadeInUp" data-wow-delay="0.3s">
             <h1>Popular Manga</h1>
         </div>
         <?php foreach ($new_komik as $nk) {
@@ -407,7 +409,8 @@ function time_ago($timestamp)
             $chLast = $this->db->query("SELECT a.chapter, a.createDate, a.id_nama_komik FROM tbl_komik a LEFT JOIN tbl_nama_komik b ON a.id_nama_komik = b.id WHERE a.id_nama_komik = '" . $nk->id . "' ORDER BY a.createDate DESC LIMIT 1 ")->row();
 
         ?>
-        <a href="<?= base_url(); ?>komik/komik_detail/<?= $nk->slug; ?>" class="box-manga" title="<?= $nk->nama; ?>">
+        <a href="<?= base_url(); ?>komik/komik_detail/<?= $nk->slug; ?>" class="box-manga wow fadeInUp"
+            data-wow-delay="0.3s" title="<?= $nk->nama; ?>">
             <div class="img">
                 <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/thumbnail/<?= $nk->image; ?>"
                     class="img-fluid w-100" alt="">

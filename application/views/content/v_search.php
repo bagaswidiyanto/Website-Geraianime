@@ -16,7 +16,7 @@
                 $slg = str_replace("-", "_", $s->slugTurunan);
             ?>
             <?php if ($s->flags == 1) { ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>anime/anime_detail/<?= $s->slug; ?>"
                         title="<?= $s->nama; ?> Episode <?= $s->episode; ?>">
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <?php } else if ($s->flags == 2) { ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>anime/anime_eps/<?= $s->slug; ?>/<?= $s->id; ?>"
                         title="<?= $s->nama; ?> Episode <?= $s->episode; ?>">
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <?php } else if ($s->flags == 3) { ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>komik/komik_detail/<?= $s->slug; ?>"
                         title="<?= $s->nama; ?> Episode <?= $s->episode; ?>">
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <?php } else if ($s->flags == 4) { ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>komik/komik_chapter/<?= $s->slug; ?>/<?= $s->id; ?>"
                         title="<?= $s->nama; ?> Episode <?= $s->episode; ?>">
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <?php } else if ($s->flags == 5) { ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>movie/anime_movie/<?= $s->slug; ?>/<?= $s->id; ?>"
                         title="<?= $s->nama; ?> Episode <?= $s->episode; ?>">

@@ -105,14 +105,14 @@ function time_ago($timestamp)
     <div class="container py-5">
         <div class="row pb-5">
             <div class="col-lg-8">
-                <div class="header-title-detail">
+                <div class="header-title-detail wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="text-white"><?= $movie->nama; ?> Subtitle Indonesia</h2>
                 </div>
-                <ul class="breadcrumb mb-0">
+                <ul class="breadcrumb mb-0 wow fadeInUp" data-wow-delay="0.3s">
                     <li><a href="<?= base_url() ?>">Home</a></li>
                     <li><?= $movie->nama; ?> Subtitle Indonesia</li>
                 </ul>
-                <div class="share my-3">
+                <div class="share my-3 wow fadeInUp" data-wow-delay="0.3s">
                     <a onclick="is_share(<?= $movie->id; ?>,'facebook')"
                         href="https://www.facebook.com/sharer.php?u=<?= base_url(); ?>movie/anime_movie/<?= $movie->slug; ?>"
                         target="_blank" rel="nofollow" class="rounded-3 text-white py-1 px-2" title="Share ke Facebook"
@@ -140,14 +140,14 @@ function time_ago($timestamp)
         <div class="row">
 
             <div class="col-lg-8">
-                <div class="video pt-3">
+                <div class="video pt-3 wow fadeInUp" data-wow-delay="0.3s">
                     <video width="100%" controls>
                         <source src="https://admin103.geraianime.com/upload/<?= $slg; ?>/movie/<?= $movie->video; ?>"
                             type="video/mp4">
                     </video>
                 </div>
                 <div class="about-anime mt-4">
-                    <table class="table table-striped">
+                    <table class="table table-striped wow fadeInUp" data-wow-delay="0.3s">
                         <tbody>
                             <tr>
                                 <td>Judul</td>
@@ -190,11 +190,11 @@ function time_ago($timestamp)
                         </tbody>
                     </table>
 
-                    <div class="img-detail mt-4">
+                    <div class="img-detail mt-4 wow fadeInUp" data-wow-delay="0.3s">
                         <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $movie->image; ?>"
                             class="img-fluid" alt="">
                     </div>
-                    <div class="desk pt-2">
+                    <div class="desk pt-2 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="sinopsis my-3">
                             <h4 class="text-white">Sinopsis</h4>
                         </div>
@@ -204,7 +204,7 @@ function time_ago($timestamp)
 
             </div>
             <div class="col-lg-4">
-                <div class="box-advert mt-4 mt-lg-0">
+                <div class="box-advert mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
                     <?php if ($bIklan14->image != '') { ?>
                     <a href="<?= $bIklan14->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan14->image; ?>"
@@ -215,7 +215,7 @@ function time_ago($timestamp)
                     <?php } ?>
                 </div>
                 <div class="side-other-movies">
-                    <div class="header-title py-2 px-3 text-center mt-4">
+                    <div class="header-title py-2 px-3 text-center mt-4 wow fadeInUp" data-wow-delay="0.3s">
                         <h4>Popular Movies</h4>
                     </div>
                     <div class="row g-4 mt-4">
@@ -223,7 +223,7 @@ function time_ago($timestamp)
                             $slg = str_replace("-", "_", $rm->slug_turunan);
 
                         ?>
-                        <div class="col-4 col-md-2 col-lg-4">
+                        <div class="col-4 col-md-2 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>movie/anime_movie/<?= $rm->slug; ?>" title="<?= $rm->nama; ?>">
                                 <div class="img">
                                     <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/thumbnail/<?= $rm->image; ?>"
@@ -232,7 +232,7 @@ function time_ago($timestamp)
                             </a>
 
                         </div>
-                        <div class="col-8 col-md-4 col-lg-8 px-0">
+                        <div class="col-8 col-md-4 col-lg-8 px-0 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>anime/anime_detail/<?= $rm->slug; ?>" title="<?= $rm->nama; ?>">
                                 <div class="content ms-2">
                                     <p><?= $rm->nama; ?> Subtitle Indonesia</p>
@@ -249,14 +249,14 @@ function time_ago($timestamp)
             </div>
         </div>
         <div class="movie-container text-center" align="center">
-            <div class="header-title text-start mb-4 mt-5">
+            <div class="header-title text-start mb-4 mt-5 wow fadeInUp" data-wow-delay="0.3s">
                 <h1>Movie Terbaru</h1>
             </div>
             <div class="row g-4">
                 <?php foreach ($movie_terbaru as $mt) {
                     $slg = str_replace("-", "_", $mt->slug_turunan);
                 ?>
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="box-movie position-relative">
                         <a href="<?= base_url(); ?>movie/anime_movie/<?= $mt->slug; ?>" title="<?= $mt->nama; ?>">
                             <div class="movie-wrap">

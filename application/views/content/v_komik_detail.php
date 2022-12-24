@@ -105,17 +105,17 @@ function time_ago($timestamp)
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-8">
-                <div class="header-title-detail">
+                <div class="header-title-detail wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="text-white"><?= $komik->nama; ?> Chapter <?= $komik->chapter; ?> Bahasa Indonesia</h2>
                 </div>
-                <ul class="breadcrumb mb-0">
+                <ul class="breadcrumb mb-0 wow fadeInUp" data-wow-delay="0.3s">
                     <li><a href="<?= base_url() ?>">Home</a></li>
                     <li><a
                             href="<?= base_url(); ?>komik/komik_detail/<?= $komik->slgDetail; ?>"><?= $komik->nama; ?></a>
                     </li>
                     <li><?= $komik->nama; ?> Chapter <?= $komik->chapter; ?> Bahasa Indonesia</li>
                 </ul>
-                <div class="share my-3">
+                <div class="share my-3 wow fadeInUp" data-wow-delay="0.3s">
                     <a onclick="is_share(<?= $komik->id; ?>,'facebook')"
                         href="https://www.facebook.com/sharer.php?u=<?= base_url(); ?>komik/komik_chapter/<?= $komik->slug; ?>/<?= $komik->id_nama_komik; ?>"
                         target="_blank" rel="nofollow" class="rounded-3 text-white py-1 px-2" title="Share ke Facebook"
@@ -138,13 +138,13 @@ function time_ago($timestamp)
                         SHARE
                     </a>
                 </div>
-                <p class="text-white release">UP
+                <p class="text-white release wow fadeInUp" data-wow-delay="0.3s">UP
                     <?= format_hari_tanggal(date('d M Y, l h:i', strtotime($komik->createDate))); ?>
                     <?= date('h:i', strtotime($komik->createDate)); ?> Wib <span class="ms-3 text-white">Chapter
                         <?= $komik->chapter; ?></span></p>
             </div>
         </div>
-        <div class="row justify-content-center mt-4 text-center">
+        <div class="row justify-content-center mt-4 text-center wow fadeInUp" data-wow-delay="0.3s">
             <?php $page = $this->db->query("SELECT * FROM tbl_komik WHERE slug = '" . $uri3 . "'")->row(); ?>
 
             <?php foreach ($this->db->query("SELECT a.slug, a.id_nama_komik, a.chapter, b.nama FROM tbl_komik a LEFT JOIN tbl_nama_komik b ON a.id_nama_komik = b.id WHERE a.id_nama_komik = '" . $page->id_nama_komik . "' AND a.chapter < '" . $page->chapter . "'  ORDER BY chapter DESC LIMIT 1")->result() as $k) { ?>
@@ -170,12 +170,12 @@ function time_ago($timestamp)
 
                         ?>
                     <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/manga/chapter_<?= $kd->chapter; ?>/<?= $kd->image; ?>"
-                        alt="" class="img-fluid">
+                        alt="" class="img-fluid wow fadeInUp" data-wow-delay="0.3s">
                     <?php } ?>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center wow fadeInUp" data-wow-delay="0.3s">
             <?php $page = $this->db->query("SELECT * FROM tbl_komik WHERE slug = '" . $uri3 . "'")->row(); ?>
 
             <?php foreach ($this->db->query("SELECT a.slug, a.id_nama_komik, a.chapter, b.nama FROM tbl_komik a LEFT JOIN tbl_nama_komik b ON a.id_nama_komik = b.id WHERE a.id_nama_komik = '" . $page->id_nama_komik . "' AND a.chapter < '" . $page->chapter . "'  ORDER BY chapter DESC LIMIT 1")->result() as $k) { ?>
@@ -197,7 +197,8 @@ function time_ago($timestamp)
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="img-detail text-center text-lg-start mb-4 mb-lg-0">
+                        <div class="img-detail text-center text-lg-start mb-4 mb-lg-0 wow fadeInUp"
+                            data-wow-delay="0.3s">
                             <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $komik->image; ?>"
                                 class="img-fluid" alt="" title="Komik <?= $komik->nama; ?>">
                         </div>
@@ -205,7 +206,7 @@ function time_ago($timestamp)
                     </div>
                     <div class="col-lg-8">
                         <div class="about-anime">
-                            <table class="table table-striped">
+                            <table class="table table-striped wow fadeInUp" data-wow-delay="0.3s">
                                 <tbody>
                                     <tr>
                                         <td width="32%">Judul</td>
@@ -280,7 +281,7 @@ function time_ago($timestamp)
 
                 <div class="chapter_list mt-3">
                     <?php foreach ($chapter_list as $cl) { ?>
-                    <div class="box">
+                    <div class="box wow fadeInUp" data-wow-delay="0.3s">
                         <a href="<?= base_url(); ?>komik/komik_chapter/<?= $cl->slug; ?>/<?= $cl->id_nama_komik; ?>"
                             title="Chapter <?= $cl->chapter; ?>">
                             <p>Chapter <?= $cl->chapter; ?></p>
@@ -288,20 +289,8 @@ function time_ago($timestamp)
                         </a>
                     </div>
                     <?php } ?>
-                    <div class="box">
-                        <a href="" title="Chapter 197">
-                            <p>Chapter 197</p>
-                            <span>2 hari yang lalu</span>
-                        </a>
-                    </div>
-                    <div class="box">
-                        <a href="" title="Chapter 196">
-                            <p>Chapter 196</p>
-                            <span>2 hari yang lalu</span>
-                        </a>
-                    </div>
                 </div>
-                <div class="desk pt-2 pb-4 pb-lg-0">
+                <div class="desk pt-2 pb-4 pb-lg-0 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="sinopsis my-3">
                         <h4 class="text-white">Sinopsis</h4>
                     </div>
@@ -309,7 +298,7 @@ function time_ago($timestamp)
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="box-advert">
+                <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
                     <?php if ($bIklan11->image != '') { ?>
                     <a href="<?= $bIklan11->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan11->image; ?>"
@@ -320,7 +309,7 @@ function time_ago($timestamp)
                     <?php } ?>
                 </div>
                 <div class="side-other-manga">
-                    <div class="header-title py-2 px-3 text-center mt-4">
+                    <div class="header-title py-2 px-3 text-center mt-4 wow fadeInUp" data-wow-delay="0.3s">
                         <h4>Rekomendasi Manga</h4>
                     </div>
                     <div class="row g-4 mt-4">
@@ -328,7 +317,7 @@ function time_ago($timestamp)
                                 $slg = str_replace("-", "_", $rm->slug_turunan);
 
                             ?>
-                        <div class="col-lg-4 col-md-2 col-4">
+                        <div class="col-lg-4 col-md-2 col-4 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>komik/komik_detail/<?= $rm->slug; ?>">
                                 <div class="img">
                                     <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/thumbnail/<?= $rm->image; ?>"
@@ -336,7 +325,7 @@ function time_ago($timestamp)
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-8 col-md-4 col-8">
+                        <div class="col-lg-8 col-md-4 col-8 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>komik/komik_detail/<?= $rm->slug; ?>">
                                 <div class="content">
                                     <p><?= $rm->nama; ?> Bahasa Indonesia</p>
@@ -354,14 +343,14 @@ function time_ago($timestamp)
 
 
         <div class="manga-chp-container text-center" align="center">
-            <div class="header-title text-start mb-4 mt-5">
+            <div class="header-title text-start mb-4 mt-5 wow fadeInUp" data-wow-delay="0.3s">
                 <h1>Baca Juga Manga terupdate </h1>
             </div>
             <div class="row">
                 <?php foreach ($update_manga as $um) {
                         $slg = str_replace("-", "_", $um->slug_turunan);
                     ?>
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="box-manga-latest position-relative">
                         <a href="<?= base_url(); ?>komik/komik_chapter/<?= $um->slug; ?>/<?= $um->id_nama_komik; ?>"
                             title="Komik <?= $um->nama; ?> Chapter <?= $um->chapter; ?>">
@@ -394,14 +383,14 @@ function time_ago($timestamp)
     <div class="container py-5">
         <div class="row pb-5">
             <div class="col-lg-8">
-                <div class="header-title-detail">
+                <div class="header-title-detail wow fadeInUp" data-wow-delay="0.3s">
                     <h2 class="text-white"><?= $komik_detail->nama; ?> Bahasa Indonesia</h2>
                 </div>
-                <ul class="breadcrumb mb-0">
+                <ul class="breadcrumb mb-0 wow fadeInUp" data-wow-delay="0.3s">
                     <li><a href="<?= base_url() ?>">Home</a></li>
                     <li><?= $komik_detail->nama; ?></li>
                 </ul>
-                <div class="share my-3">
+                <div class="share my-3 wow fadeInUp" data-wow-delay="0.3s">
                     <a onclick="is_share(<?= $komik_detail->id; ?>,'facebook')"
                         href="https://www.facebook.com/sharer.php?u=<?= base_url(); ?>komik/komik_detail/<?= $komik_detail->slug; ?>"
                         target="_blank" rel="nofollow" class="rounded-3 text-white py-1 px-2" title="Share ke Facebook"
@@ -431,7 +420,8 @@ function time_ago($timestamp)
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="img-detail text-center text-lg-start mb-4 mb-lg-0">
+                        <div class="img-detail text-center text-lg-start mb-4 mb-lg-0 wow fadeInUp"
+                            data-wow-delay="0.3s">
                             <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/<?= $komik_detail->image; ?>"
                                 class="img-fluid" alt="">
                         </div>
@@ -439,7 +429,7 @@ function time_ago($timestamp)
                     </div>
                     <div class="col-lg-8">
                         <div class="about-anime">
-                            <table class="table table-striped">
+                            <table class="table table-striped wow fadeInUp" data-wow-delay="0.3s">
                                 <tbody>
                                     <tr>
                                         <td width="32%">Judul</td>
@@ -511,7 +501,7 @@ function time_ago($timestamp)
                         </div>
                     </div>
                 </div>
-                <div class="desk pt-2 pb-4 pb-lg-0">
+                <div class="desk pt-2 pb-4 pb-lg-0 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="sinopsis my-3">
                         <h4 class="text-white">Sinopsis</h4>
                     </div>
@@ -519,7 +509,7 @@ function time_ago($timestamp)
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="box-advert">
+                <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
                     <?php if ($bIklan12->image != '') { ?>
                     <a href="<?= $bIklan12->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan12->image; ?>"
@@ -530,7 +520,7 @@ function time_ago($timestamp)
                     <?php } ?>
                 </div>
                 <div class="side-other-manga">
-                    <div class="header-title py-2 px-3 text-center mt-4">
+                    <div class="header-title py-2 px-3 text-center mt-4 wow fadeInUp" data-wow-delay="0.3s">
                         <h4>Rekomendasi Manga</h4>
                     </div>
                     <div class="row g-4 mt-4">
@@ -538,7 +528,7 @@ function time_ago($timestamp)
                                 $slg = str_replace("-", "_", $rm->slug_turunan);
 
                             ?>
-                        <div class="col-lg-4 col-md-2 col-4">
+                        <div class="col-lg-4 col-md-2 col-4 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>komik/komik_detail/<?= $rm->slug; ?>">
                                 <div class="img">
                                     <img src="https://admin103.geraianime.com/upload/<?= $slg; ?>/gambar_anime/thumbnail/<?= $rm->image; ?>"
@@ -546,7 +536,7 @@ function time_ago($timestamp)
                                 </div>
                             </a>
                         </div>
-                        <div class="col-lg-8 col-md-4 col-8">
+                        <div class="col-lg-8 col-md-4 col-8 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>komik/komik_detail/<?= $rm->slug; ?>">
                                 <div class="content">
                                     <p><?= $rm->nama; ?> Bahasa Indonesia</p>
@@ -564,13 +554,13 @@ function time_ago($timestamp)
             margin-left: calc(var(--bs-gutter-x) / 2);"></div>
         <div class="row">
             <div class="col-lg-8">
-                <div class="header-title my-4">
+                <div class="header-title my-4 wow fadeInUp" data-wow-delay="0.3s">
                     <h1>Chapter List</h1>
                 </div>
                 <div class="box-scroll-chapter">
                     <?php foreach ($chapter_list as $cl) { ?>
                     <a href="<?= base_url(); ?>komik/komik_chapter/<?= $cl->slg; ?>/<?= $cl->id_nama_komik; ?>">
-                        <div class="chapter">
+                        <div class="chapter wow fadeInUp" data-wow-delay="0.3s">
                             <p><?= $cl->nama; ?> Chapter <?= $cl->chapter; ?></p>
                             <span><?= time_ago($cl->createDate); ?></span>
                         </div>
@@ -579,7 +569,7 @@ function time_ago($timestamp)
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="box-advert mt-5">
+                <div class="box-advert mt-5 wow fadeInUp" data-wow-delay="0.3s">
                     <?php if ($bIklan13->image != '') { ?>
                     <a href="<?= $bIklan13->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan13->image; ?>"
@@ -592,14 +582,14 @@ function time_ago($timestamp)
             </div>
         </div>
         <div class="manga-chp-container text-center" align="center">
-            <div class="header-title text-start mb-4 mt-5">
+            <div class="header-title text-start mb-4 mt-5 wow fadeInUp" data-wow-delay="0.3s">
                 <h1>Baca Juga Manga terupdate </h1>
             </div>
             <div class="row">
                 <?php foreach ($update_manga as $um) {
                         $slg = str_replace("-", "_", $um->slug_turunan);
                     ?>
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="box-manga-latest position-relative">
                         <a href="<?= base_url(); ?>komik/komik_chapter/<?= $um->slug; ?>/<?= $um->id_nama_komik; ?>">
                             <div class="manga-latest-wrap">

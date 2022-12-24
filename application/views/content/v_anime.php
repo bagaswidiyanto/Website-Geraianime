@@ -10,7 +10,7 @@
             <?php foreach ($anime as $al) {
                 $slg = str_replace("-", "_", $al->slug);
             ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>anime/anime_eps/<?= $al->slug; ?>/<?= $al->id; ?>"
                         title="<?= $al->nama; ?> Subtitle Indonesia">

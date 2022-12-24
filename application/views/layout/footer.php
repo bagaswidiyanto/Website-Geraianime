@@ -1,12 +1,12 @@
 <div class="bg-linier-orange">
     <div class="container-fluid  footer position-relative">
         <div class="container py-5">
-            <div class="img-footer mb-4">
+            <div class="img-footer mb-4 wow fadeInUp" data-wow-delay="0.3s">
                 <a href="<?= base_url() ?>" title="<?= $website->name; ?>">
                     <img src="<?= base_url(); ?>assets/img/logo_header.png" class="img-fluid" alt="">
                 </a>
             </div>
-            <div class="row justify-content-between">
+            <div class="row justify-content-between wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-lg-5 col-md-6 col-sm-12">
                     <div class="desk mb-4">
                         <p class="text-white"><?= $website->description; ?></p>
@@ -31,7 +31,7 @@
 
             </div>
 
-            <div class="copyright text-center position-relative mt-5">
+            <div class="copyright text-center position-relative mt-5 wow fadeInUp" data-wow-delay="0.3s">
                 <img src="<?= base_url() ?>assets/img/logo_copyright.png" class="img-fluid" alt="">
                 <div class="row d-flex justify-content-center  text-center">
                     <div class="col-xl-5 col-lg-6 col-md-7 col-sm-9 col-12">

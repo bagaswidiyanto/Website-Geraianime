@@ -57,7 +57,7 @@ function time_ago($timestamp)
 ?>
 <div class="container-xxl all-manga">
     <div class="container py-5">
-        <div class="header-title pb-4">
+        <div class="header-title pb-4 wow fadeInUp" data-wow-delay="0.3s">
             <h1>Manga </h1>
             <h4>Manga Terbaru</h4>
         </div>
@@ -69,7 +69,7 @@ function time_ago($timestamp)
                             $slg = str_replace("-", "_", $k->slug_turunan);
 
                         ?>
-                        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
                             <a href="<?= base_url(); ?>komik/komik_chapter/<?= $k->slug; ?>/<?= $k->id_nama_komik; ?>"
                                 title="<?= $k->nama; ?> Chapter <?= $k->chapter; ?> Bahasa Indonesia">
                                 <div class="img">

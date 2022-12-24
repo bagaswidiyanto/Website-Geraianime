@@ -100,10 +100,6 @@ function time_ago($timestamp)
 
 ?>
 
-<style>
-
-</style>
-
 <div class="container-xxl all-movie">
     <div class="container py-5">
         <div class="movie">
@@ -111,7 +107,7 @@ function time_ago($timestamp)
                 <?php foreach ($movie as $m) {
                     $slg = str_replace("-", "_", $m->slug_turunan);
                 ?>
-                <div class="col-lg-3 col-md-4 col-6">
+                <div class="col-lg-3 col-md-4 col-6 wow fadeInUp" data-wow-delay="0.3s">
                     <a href="<?= base_url(); ?>movie/anime_movie/<?= $m->slug; ?>"
                         title="<?= $m->nama; ?> Subtitle Indonesia">
                         <div class="headline-last position-relative">

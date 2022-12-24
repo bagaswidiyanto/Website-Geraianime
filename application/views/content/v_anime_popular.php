@@ -92,7 +92,7 @@ function time_ago($timestamp)
             <?php foreach ($animePopular as $ap) {
                 $slg = str_replace("-", "_", $ap->slug);
             ?>
-            <div class="anime-eps-item">
+            <div class="anime-eps-item wow fadeInUp" data-wow-delay="0.3s">
                 <div class="box-anime-eps position-relative">
                     <a href="<?= base_url(); ?>anime/anime_detail/<?= $ap->slug; ?>" title="<?= $ap->nama; ?>">
                         <div class="anime-eps-wrap">

@@ -1,18 +1,18 @@
 <div class="container-xxl anime-list-on-going">
     <div class="container py-5">
-        <div class="header-title">
+        <div class="header-title wow fadeInUp" data-wow-delay="0.3s">
             <h1>Manga List A-Z</h1>
         </div>
 
         <div class="on-going list-anime">
-            <div class="header-title-going my-4">
+            <div class="header-title-going my-4 wow fadeInUp" data-wow-delay="0.3s">
                 <h2>On Going Manga</h2>
             </div>
             <div class="row ">
                 <?php foreach ($this->db->query("SELECT * FROM tbl_nama_komik WHERE aktif = 'Y' AND status = 'On Going' ORDER BY nama ASC")->result() as $na) {
                     $genre = $this->db->query("SELECT c.nama FROM tbl_nama_komik a left JOIN tbl_genre_detail_komik b ON a.id=b.komikID LEFT JOIN tbl_genre c ON b.genreID=c.id WHERE a.slug = '" . $na->slug . "'  GROUP by b.komikID ORDER BY b.genreID ASC ")->row();
                 ?>
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-white pb-3">
                         <div class="list d-flex justify-content-between">
                             <a href="<?= base_url(); ?>komik/komik_detail/<?= $na->slug; ?>"
@@ -30,7 +30,7 @@
 
 <div class="container-fluid bg-abjtext">
     <div class="container">
-        <div class="abjtext py-4 text-center">
+        <div class="abjtext py-4 text-center wow fadeInUp" data-wow-delay="0.3s">
             <h4 class="text-white pb-3 text-start">MANGA LIST GO TO</h4>
             <div class="col-abjad">
                 <a href="#ZERO">#</a>
@@ -119,7 +119,7 @@
 
 <div class="container-xxl list-anime">
     <div class="container py-5">
-        <div class="box-advert">
+        <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
             <?php if ($bIklan5->image != '') { ?>
             <a href="<?= $bIklan5->url; ?>">
                 <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan5->image; ?>" class="img-fluid w-100"
@@ -136,7 +136,7 @@
                     <div class="row g-4 justify-content-between pt-2">
                         <?php $zero = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE nama NOT LIKE 'A%' AND nama NOT LIKE 'B%' AND nama NOT LIKE 'C%' AND nama NOT LIKE 'D%' AND nama NOT LIKE 'E%' AND nama NOT LIKE 'F%' AND nama NOT LIKE 'G%' AND nama NOT LIKE 'H%' AND nama NOT LIKE 'I%' AND nama NOT LIKE 'J%' AND nama NOT LIKE 'K%' AND nama NOT LIKE 'L%' AND nama NOT LIKE 'M%' AND nama NOT LIKE 'N%' AND nama NOT LIKE 'O%' AND nama NOT LIKE 'P%' AND nama NOT LIKE 'Q%' AND nama NOT LIKE 'R%' AND nama NOT LIKE 'S%' AND nama NOT LIKE 'T%' AND nama NOT LIKE 'U%' AND nama NOT LIKE 'V%' AND nama NOT LIKE 'W%' AND nama NOT LIKE 'X%' AND nama NOT LIKE 'Y%' AND nama NOT LIKE 'Z%' AND aktif = 'Y' ORDER BY nama ASC ")->row() ?>
                         <?php if (isset($zero->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="ZERO">
                                 <h4 class="text-white">#</h4>
                             </div>
@@ -155,7 +155,7 @@
                         <?php } ?>
                         <?php $a = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'A%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($a->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="A">
                                 <h4 class="text-white">A</h4>
                             </div>
@@ -174,7 +174,7 @@
                         <?php } ?>
                         <?php $b = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'B%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($b->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="B">
                                 <h4 class="text-white">B</h4>
                             </div>
@@ -193,7 +193,7 @@
                         <?php } ?>
                         <?php $c = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'C%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($c->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="C">
                                 <h4 class="text-white">C</h4>
                             </div>
@@ -212,7 +212,7 @@
                         <?php } ?>
                         <?php $d = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'D%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($d->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="D">
                                 <h4 class="text-white">D</h4>
                             </div>
@@ -231,7 +231,7 @@
                         <?php } ?>
                         <?php $e = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'E%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($e->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="E">
                                 <h4 class="text-white">E</h4>
                             </div>
@@ -250,7 +250,7 @@
                         <?php } ?>
                         <?php $f = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'F%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($f->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="F">
                                 <h4 class="text-white">F</h4>
                             </div>
@@ -269,7 +269,7 @@
                         <?php } ?>
                         <?php $g = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'G%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($g->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="G">
                                 <h4 class="text-white">G</h4>
                             </div>
@@ -288,7 +288,7 @@
                         <?php } ?>
                         <?php $h = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'H%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($h->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="H">
                                 <h4 class="text-white">H</h4>
                             </div>
@@ -307,7 +307,7 @@
                         <?php } ?>
                         <?php $i = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'i%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($i->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="I">
                                 <h4 class="text-white">I</h4>
                             </div>
@@ -326,7 +326,7 @@
                         <?php } ?>
                         <?php $j = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'J%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($j->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="J">
                                 <h4 class="text-white">J</h4>
                             </div>
@@ -345,7 +345,7 @@
                         <?php } ?>
                         <?php $k = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'K%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($k->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="K">
                                 <h4 class="text-white">K</h4>
                             </div>
@@ -364,7 +364,7 @@
                         <?php } ?>
                         <?php $l = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'L%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($l->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="L">
                                 <h4 class="text-white">L</h4>
                             </div>
@@ -383,7 +383,7 @@
                         <?php } ?>
                         <?php $m = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'M%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($m->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="M">
                                 <h4 class="text-white">M</h4>
                             </div>
@@ -402,7 +402,7 @@
                         <?php } ?>
                         <?php $n = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'N%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($n->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="N">
                                 <h4 class="text-white">N</h4>
                             </div>
@@ -421,7 +421,7 @@
                         <?php } ?>
                         <?php $o = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'O%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($o->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="O">
                                 <h4 class="text-white">O</h4>
                             </div>
@@ -440,7 +440,7 @@
                         <?php } ?>
                         <?php $p = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'P%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($p->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="P">
                                 <h4 class="text-white">P</h4>
                             </div>
@@ -459,7 +459,7 @@
                         <?php } ?>
                         <?php $q = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'Q%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($q->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="Q">
                                 <h4 class="text-white">Q</h4>
                             </div>
@@ -478,7 +478,7 @@
                         <?php } ?>
                         <?php $r = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'Q%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($r->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="R">
                                 <h4 class="text-white">R</h4>
                             </div>
@@ -497,7 +497,7 @@
                         <?php } ?>
                         <?php $s = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'S%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($s->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="S">
                                 <h4 class="text-white">S</h4>
                             </div>
@@ -516,7 +516,7 @@
                         <?php } ?>
                         <?php $t = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'T%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($t->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="T">
                                 <h4 class="text-white">T</h4>
                             </div>
@@ -535,7 +535,7 @@
                         <?php } ?>
                         <?php $u = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'U%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($u->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="U">
                                 <h4 class="text-white">U</h4>
                             </div>
@@ -554,7 +554,7 @@
                         <?php } ?>
                         <?php $v = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'V%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($v->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="V">
                                 <h4 class="text-white">V</h4>
                             </div>
@@ -573,7 +573,7 @@
                         <?php } ?>
                         <?php $w = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'W%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($w->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="W">
                                 <h4 class="text-white">W</h4>
                             </div>
@@ -592,7 +592,7 @@
                         <?php } ?>
                         <?php $c = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'X%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($c->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="X">
                                 <h4 class="text-white">X</h4>
                             </div>
@@ -611,7 +611,7 @@
                         <?php } ?>
                         <?php $y = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'Y%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($y->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="Y">
                                 <h4 class="text-white">Y</h4>
                             </div>
@@ -630,7 +630,7 @@
                         <?php } ?>
                         <?php $z = $this->db->query("SELECT slug, nama FROM tbl_nama_komik WHERE aktif = 'Y' AND nama LIKE 'Z%' ORDER BY nama ASC")->row() ?>
                         <?php if (isset($z->nama)) { ?>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="abjad bg-linier-orange py-1 px-3" id="Z">
                                 <h4 class="text-white">Z</h4>
                             </div>

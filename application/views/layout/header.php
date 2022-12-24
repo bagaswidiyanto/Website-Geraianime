@@ -274,10 +274,10 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0" id="home">
         <div class="hero-header position-relative">
-            <div class="hero-bg">
+            <div class="hero-bg wow fadeInUp" data-wow-delay="0.3s">
                 <img src="https://admin103.geraianime.com/upload/<?= $hero->image; ?>" class="img-fluid w-100" alt="">
             </div>
-            <div class="sosmed">
+            <div class="sosmed wow fadeInDown" data-wow-delay="0.3s">
                 <div class="d-flex justify-content-end align-items-center">
                     <p>Fanspage : @geraianime </p>
                     <div class="d-flex align-items-center">
@@ -289,13 +289,13 @@
                 </div>
             </div>
 
-            <div class="logo">
+            <div class="logo wow fadeInUp" data-wow-delay="0.3s">
                 <a href="<?= base_url() ?>" title="<?= $website->name; ?>">
                     <img src="<?= base_url() ?>assets/img/logo_header.png" class="img-fluid" alt="">
                 </a>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light px-4 py-2 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 py-2 py-lg-0 wow fadeInUp" data-wow-delay="0.3s">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
