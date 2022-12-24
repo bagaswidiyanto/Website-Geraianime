@@ -13,7 +13,7 @@
                     </div>
                     <div class="terms">
                         <a href="<?= base_url(); ?>terms" title="Terms & Agreements"
-                            class="text-white fs-5 fw-normal me-3">Terms & Agreements</a>
+                            class="text-white fs-5 fw-normal me-3">Terms & Agreem ents</a>
                         <a href="<?= base_url(); ?>privacy" title="Privacy Policy"
                             class="text-white fs-5 fw-normal">Privacy Policy</a>
                     </div>
