@@ -65,6 +65,18 @@ class Search extends MY_Controller
 			SELECT e.id, e.nama, e.slug_turunan, e.slug, e.create_date, '' as episode, e.image, e.flag as flags FROM tbl_movie e WHERE e.nama LIKE '%$param%'
 		) as A ORDER BY A.nama ASC LIMIT " . $config['per_page'] . "")->result();
 
+		$this->data['jml_data'] = $this->db->query("SELECT COUNT(*)as jml, A.* FROM (
+			SELECT a.id, a.nama,a.slug as slugTurunan, a.slug, a.tgl_rilis, '' as episode, a.image, a.flag as flags FROM tbl_nama_anime a WHERE a.aktif = 'Y' AND a.nama LIKE '%$param%'
+			UNION
+			SELECT b.id_anime, bb.nama, b.url_segment,b.slug, b.createDate, b.episode, bb.image, b.flag as flags FROM tbl_anime_list b LEFT JOIN tbl_nama_anime bb ON b.id_anime=bb.id WHERE bb.aktif = 'Y' AND bb.nama LIKE '%$param%'
+			UNION
+			SELECT c.id, c.nama, c.slug_turunan, c.slug, c.tgl_rilis, '' as episode, c.image, c.flag as flags FROM tbl_nama_komik c WHERE c.aktif = 'Y' AND c.nama LIKE '%$param%'
+			UNION
+			SELECT d.id_nama_komik, dd.nama, d.slug_turunan, d.slug, d.createDate, d.chapter,dd.image, d.flag as flags FROM tbl_komik d LEFT JOIN tbl_nama_komik dd ON d.id_nama_komik=dd.id WHERE dd.aktif = 'Y' AND dd.nama LIKE '%$param%'
+			UNION 
+			SELECT e.id, e.nama, e.slug_turunan, e.slug, e.create_date, '' as episode, e.image, e.flag as flags FROM tbl_movie e WHERE e.nama LIKE '%$param%'
+		) as A ORDER BY A.nama ASC LIMIT " . $config['per_page'] . "")->row();
+
 		// $this->db->select('a.id,a.nama,a.slug,a.tgl_rilis,a.image, a.flag,b.episode,b.season,b.slug as slgEps,b.episode, b.flag as fEps,c.nama as namaKomik,c.slug as slugKomik,c.tgl_rilis as tglKomik,c.image as imgKomik, c.flag as fKomik,d.slug as slugChp,d.chapter,d.createDate, d.flag as FChp,e.nama as namaMovie,e.slug as slugMovie,e.image as imgMovie, e.flag as fMovie');
 		// $this->db->from('tbl_nama_anime a ');
 		// $this->db->join('tbl_anime_list b', 'b.id_anime = a.id', 'left');

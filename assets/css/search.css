@@ -1,6 +1,9 @@
 .all-anime .header-title h1 {
     font-size: 16pt;
 }
+.all-anime .header-title p {
+    color: #FF6147;
+}
 
 .all-anime .anime-eps-wrap {
     transition: 0.3s;

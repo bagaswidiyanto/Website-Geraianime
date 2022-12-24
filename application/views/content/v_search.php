@@ -9,6 +9,7 @@
             <?php } else { ?>
             <h1>Pencarian: All</h1>
             <?php } ?>
+            <p>Jumlah Data: <?= $jml_data->jml; ?></p>
         </div>
         <div class="anime-eps-container">
             <?php foreach ($search as $s) {
