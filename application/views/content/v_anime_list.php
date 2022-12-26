@@ -121,7 +121,7 @@
 <div class="container-xxl anime-list">
     <div class="container py-5">
         <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
-            <?php if ($bIklan4->image != '') { ?>
+            <?php if ($bIklan4->aktif != 0) { ?>
             <a href="<?= $bIklan4->url; ?>">
                 <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan4->image; ?>" class="img-fluid w-100"
                     alt="<?= $bIklan4->nama; ?>" title="<?= $bIklan4->nama; ?>">

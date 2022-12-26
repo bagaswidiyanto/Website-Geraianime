@@ -205,7 +205,7 @@ function time_ago($timestamp)
             </div>
             <div class="col-lg-4">
                 <div class="box-advert mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
-                    <?php if ($bIklan14->image != '') { ?>
+                    <?php if ($bIklan14->aktif != 0) { ?>
                     <a href="<?= $bIklan14->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan14->image; ?>"
                             class="img-fluid w-100" alt="<?= $bIklan14->nama; ?>" title="<?= $bIklan14->nama; ?>">

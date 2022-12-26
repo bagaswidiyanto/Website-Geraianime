@@ -175,7 +175,7 @@ function time_ago($timestamp)
                 </div>
 
                 <div class="box-advert mt-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <?php if ($bIklan7->image != '') { ?>
+                    <?php if ($bIklan7->aktif != 0) { ?>
                     <a href="<?= $bIklan7->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan7->image; ?>"
                             class="img-fluid w-100" alt="<?= $bIklan7->nama; ?>" title="<?= $bIklan7->nama; ?>">
@@ -255,7 +255,7 @@ function time_ago($timestamp)
             </div>
             <div class="col-lg-4">
                 <div class="box-advert pt-3 wow fadeInUp" data-wow-delay="0.3s">
-                    <?php if ($bIklan6->image != '') { ?>
+                    <?php if ($bIklan6->aktif != 0) { ?>
                     <a href="<?= $bIklan6->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan6->image; ?>"
                             class="img-fluid w-100" alt="<?= $bIklan6->nama; ?>" title="<?= $bIklan6->nama; ?>">
@@ -370,7 +370,7 @@ function time_ago($timestamp)
             </div>
             <div class="col-lg-4">
                 <div class="box-advert wow fadeInUp" data-wow-delay="0.3s">
-                    <?php if ($bIklan8->image != '') { ?>
+                    <?php if ($bIklan8->aktif != 0) { ?>
                     <a href="<?= $bIklan8->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan8->image; ?>"
                             class="img-fluid w-100" alt="<?= $bIklan8->nama; ?>" title="<?= $bIklan8->nama; ?>">
@@ -380,7 +380,7 @@ function time_ago($timestamp)
                     <?php } ?>
                 </div>
                 <div class="box-advert mt-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <?php if ($bIklan9->image != '') { ?>
+                    <?php if ($bIklan9->aktif != 0) { ?>
                     <a href="<?= $bIklan9->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan9->image; ?>"
                             class="img-fluid w-100" alt="<?= $bIklan9->nama; ?>" title="<?= $bIklan9->nama; ?>">
@@ -551,7 +551,7 @@ function time_ago($timestamp)
             </div>
             <div class="col-lg-4">
                 <div class="box-advert mt-4 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
-                    <?php if ($bIklan10->image != '') { ?>
+                    <?php if ($bIklan10->aktif != 0) { ?>
                     <a href="<?= $bIklan10->url; ?>">
                         <img src="https://admin103.geraianime.com/upload/iklan/<?= $bIklan10->image; ?>"
                             class="img-fluid w-100" alt="<?= $bIklan10->nama; ?>" title="<?= $bIklan10->nama; ?>">
